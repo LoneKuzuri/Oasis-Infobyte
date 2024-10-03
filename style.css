@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #8B0000);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    animation: backgroundShift 6s ease infinite;
+}
+
+@keyframes backgroundShift {
+    0% { background: linear-gradient(135deg, #000000, #8B0000); }
+    50% { background: linear-gradient(135deg, #330000, #000000); }
+    100% { background: linear-gradient(135deg, #000000, #8B0000); }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 2s ease-out;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    animation: glowText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+    0% { text-shadow: 0 0 5px rgba(255, 0, 0, 0.5); }
+    100% { text-shadow: 0 0 20px rgba(255, 0, 0, 1); }
+}
+
+.input-section, .radio-section, .result-section {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+input[type="radio"] {
+    margin: 0 10px;
+}
+
+label {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #8B0000;
+    transform: scale(1.05);
+}
+
+.result-section {
+    font-size: 1.2rem;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: slideUp 1s ease-out;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.error-message {
+    color: #ff6666;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
